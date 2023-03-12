@@ -21,8 +21,10 @@ public class Weapon : MonoBehaviour
     private bool isShield = false;
     private bool isBomb = false;
     private bool isVampire = false;
+    private bool isHorns = false;
 
     private bool facingRight = true;
+    private Vector3 offset;
 
     private float time = 0f;
 
@@ -48,22 +50,24 @@ public class Weapon : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        transform.position = actor.transform.position + offset;
         time += Time.deltaTime;
         if (time >= 0.3f) {
             Destroy(gameObject);
             Debug.Log("End attack");
             actor.isAttacking = false;
+            actor.isDashing = false;
 
             // if the player is shielded, remove it here
             if (isShield) actor.SetShielded(false);
         }
     }
 
-    public void SetAttributes(Character attacker, bool attackerIsPlayer, bool right,
-                       bool sword, bool shield, bool bomb, bool vampire) {
+    public void SetAttributes(
+            Character attacker, bool attackerIsPlayer, bool right,
+            bool sword, bool shield, bool bomb, bool vampire, bool horns) {
         actor = attacker;
         playerCreated = attackerIsPlayer;
-        actor.isAttacking = true;
 
         facingRight = right;
 
@@ -71,6 +75,12 @@ public class Weapon : MonoBehaviour
         isShield = shield;
         isBomb = bomb;
         isVampire = vampire;
+        isHorns = horns;
+
+        if (isHorns) actor.isDashing = true;
+        else actor.isAttacking = true;
+
+        offset = transform.position - actor.transform.position;
     }
     
     // If this was player created, damage all objects with the "Enemy" tag

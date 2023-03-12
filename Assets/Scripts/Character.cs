@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     private float health;
     private bool isShielded;
     public bool isAttacking = false;
+    public bool isDashing = false;
 
     private int upgradeCount = 0;
     private bool hasSword = false;
@@ -71,7 +72,7 @@ public class Character : MonoBehaviour
         }
 
         clipPickup.Play();
-        
+
         upgradeCount++;
         return true;
     }
@@ -85,7 +86,7 @@ public class Character : MonoBehaviour
         Weapon attackData = attack.GetComponent<Weapon>();
         attackData.SetAttributes(
             this, isPlayer, facingRight,
-            hasSword, hasShield, hasBomb, hasVamp);
+            hasSword, hasShield, hasBomb, hasVamp, hasHorns);
 
         // GameObject explosion = Resources.Load(
         //     "Prefabs/Explosion", typeof(GameObject)) as GameObject;

@@ -22,7 +22,7 @@ public class Powerup : MonoBehaviour
     void Start() {
         sprite = transform.Find("sprite").gameObject;
         spriteRender = sprite.GetComponent<SpriteRenderer>();
-        SetWeapon("shield");
+        SetWeapon("bull");
     }
 
     // Update is called once per frame
@@ -63,6 +63,7 @@ public class Powerup : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         GameObject player = collision.gameObject;
         if (!(player.tag == "Player")) return;
+        Debug.Log("Gained " + weapon);
 
         Character playerData = player.transform.Find("PlayerObject")
             .gameObject.GetComponent<Character>();
