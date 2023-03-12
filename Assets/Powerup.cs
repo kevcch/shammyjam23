@@ -22,6 +22,7 @@ public class Powerup : MonoBehaviour
     void Start() {
         sprite = transform.Find("sprite").gameObject;
         spriteRender = sprite.GetComponent<SpriteRenderer>();
+        Debug.Log(sprite);
         SetWeapon("sword");
     }
 

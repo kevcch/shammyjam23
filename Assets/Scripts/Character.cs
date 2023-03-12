@@ -39,7 +39,8 @@ public class Character : MonoBehaviour
         health = maxHealth;
         weapon = Resources.Load(
             "Prefabs/Weapon", typeof(GameObject)) as GameObject;
-        music = musicObject.GetComponent<MusicController>();
+        if (musicObject)
+            music = musicObject.GetComponent<MusicController>();
         healthBar = healthBarObject.transform.Find("Image").gameObject;
         powerUp = Resources.Load("Prefabs/Powerup", typeof(GameObject)) as GameObject;
     }
@@ -112,6 +113,7 @@ public class Character : MonoBehaviour
             int index = Random.Range(0, 4);
             GameObject powerUpObject = Instantiate(powerUp);
             powerUpObject.transform.position = transform.position;
+            Debug.Log(powerUpObject.GetComponent<Powerup>());
             powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
         }
         Destroy(gameObject);
