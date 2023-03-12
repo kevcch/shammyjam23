@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     
     public AudioSource clipPickup;
     public AudioSource clipAttack;
+    public AudioSource clipHurt;
 
     public float maxHealth = 100f;
     public bool isPlayer = false;
@@ -115,7 +116,8 @@ public class Character : MonoBehaviour
         bool a = hasBow;
         a = hasFan;
         a = hasHorns;
-        Debug.Log("Took damage.");
+        // Debug.Log("Took damage.");
+        clipHurt.Play();
     }
 
     public void Heal(float amount) {
