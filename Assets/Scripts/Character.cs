@@ -32,6 +32,7 @@ public class Character : MonoBehaviour
     private GameObject weapon;
     private MusicController music;
     private GameObject healthBar;
+    private GameObject powerUp;
 
     // Start is called before the first frame update
     void Start() {
@@ -40,6 +41,7 @@ public class Character : MonoBehaviour
             "Prefabs/Weapon", typeof(GameObject)) as GameObject;
         music = musicObject.GetComponent<MusicController>();
         healthBar = healthBarObject.transform.Find("Image").gameObject;
+        powerUp = Resources.Load("Prefabs/Powerup", typeof(GameObject)) as GameObject;
     }
 
     // Update is called once per frame
@@ -102,6 +104,19 @@ public class Character : MonoBehaviour
         healthBar.transform.localScale = new Vector3(scaleX, 1f, 1f);
     }
 
+    public void Death() {
+        Debug.Log("Dead");
+        string[] choices = {"sword", "shield", "bull", "eye", "bomb"};
+        float r = Random.Range(0f, 1f);
+        if (r <= 0.5f) {
+            int index = Random.Range(0, 4);
+            GameObject powerUpObject = Instantiate(powerUp);
+            powerUpObject.transform.position = transform.position;
+            powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
+        }
+        Destroy(gameObject);
+    }
+
     public void Attack(bool facingRight) {
         float offset = 0.7f;
         if (!facingRight) offset = -offset;
@@ -125,6 +140,7 @@ public class Character : MonoBehaviour
         if (!isShielded) {
             health -= amount;
             if (clipHurt) clipHurt.Play();
+            if (health <= 0) Death();
             UpdateHealthBar();
         }
         // bool a = hasBow;

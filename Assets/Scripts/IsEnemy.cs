@@ -67,7 +67,7 @@ public class IsEnemy : MonoBehaviour
 
     void RandomizeDirection()
     {
-        Debug.Log("Direction Randomized");
+        // Debug.Log("Direction Randomized");
         int num = Random.Range(0, 4);
         
         if (num == 0)
