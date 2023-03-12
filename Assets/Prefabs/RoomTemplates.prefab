@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7116487317471515398}
   m_Layer: 0
   m_Name: RoomTemplates
-  m_TagString: Untagged
+  m_TagString: Rooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottomRooms:
-  - {fileID: 1645039856958038331, guid: 7313eb2e0f4fa9d469e261fbfa077449, type: 3}
+  - {fileID: 5535106318727253858, guid: 0753505661f3f40249f13c4bee5cc89d, type: 3}
   - {fileID: 5535106318727253858, guid: 32a829426f01b4874a1b3f4b42c2c4d3, type: 3}
   - {fileID: 5535106318727253858, guid: 45c42002f9d9a410aabb914f23f1db3c, type: 3}
   - {fileID: 5535106318727253858, guid: a9b9d0cf80639452c927b324d436bf86, type: 3}
@@ -55,12 +55,12 @@ MonoBehaviour:
   - {fileID: 5535106318727253858, guid: 8efbe696bcc504462a433b58ae01b041, type: 3}
   - {fileID: 5535106318727253858, guid: c7e9bd951836e0f47bba850191cc50eb, type: 3}
   leftRooms:
-  - {fileID: 751814040643492524, guid: d3a9e371d54cf6b42bae371b049101b8, type: 3}
+  - {fileID: 5535106318727253858, guid: aa78a781ac77d444cb2ffb2b3a16a3d3, type: 3}
   - {fileID: 5535106318727253858, guid: 32a829426f01b4874a1b3f4b42c2c4d3, type: 3}
   - {fileID: 5535106318727253858, guid: f5a67918cf3a74d75b6fd96d3f6ee716, type: 3}
   - {fileID: 5535106318727253858, guid: 8efbe696bcc504462a433b58ae01b041, type: 3}
   rightRooms:
-  - {fileID: 5664071083213159105, guid: aeafa0fac0bfb0e489dd30f8ddcd7db3, type: 3}
+  - {fileID: 5535106318727253858, guid: 008a5f75d53514f36aac73db905128ac, type: 3}
   - {fileID: 5535106318727253858, guid: c7e9bd951836e0f47bba850191cc50eb, type: 3}
   - {fileID: 5535106318727253858, guid: f5a67918cf3a74d75b6fd96d3f6ee716, type: 3}
   - {fileID: 5535106318727253858, guid: 45c42002f9d9a410aabb914f23f1db3c, type: 3}

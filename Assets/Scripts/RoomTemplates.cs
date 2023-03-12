@@ -8,4 +8,7 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] topRooms;
     public GameObject[] leftRooms;
     public GameObject[] rightRooms;
+
+    public int max_rooms = 10;
+    public int num_rooms = 1;
 }
