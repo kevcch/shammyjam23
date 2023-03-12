@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 5853704068408461820}
   m_Layer: 0
   m_Name: Tilemap_Water
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1259,7 +1259,7 @@ GameObject:
   - component: {fileID: 7971849915031179209}
   m_Layer: 0
   m_Name: Tilemap_Objects
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

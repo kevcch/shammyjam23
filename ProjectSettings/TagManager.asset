@@ -7,7 +7,11 @@ TagManager:
   - Rooms
   - Spawnpoint
   - RoomTrigger
+<<<<<<< HEAD
   - Enemy
+=======
+  - Wall
+>>>>>>> 5d84fb199f67a29d09b2d2a2e4759c7e8b09d023
   layers:
   - Default
   - TransparentFX
