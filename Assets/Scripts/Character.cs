@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public GameObject musicObject;
+    
     public AudioSource clipPickup;
+    public AudioSource clipAttack;
+    public AudioSource clipHurt;
 
     public float maxHealth = 100f;
     public bool isPlayer = false;
@@ -13,6 +17,7 @@ public class Character : MonoBehaviour
     private float health;
     private bool isShielded;
     public bool isAttacking = false;
+    public bool isDashing = false;
 
     private int upgradeCount = 0;
     private bool hasSword = false;
@@ -24,12 +29,14 @@ public class Character : MonoBehaviour
     private bool hasFan = false;
 
     private GameObject weapon;
+    private MusicController music;
 
     // Start is called before the first frame update
     void Start() {
         health = maxHealth;
         weapon = Resources.Load(
             "Prefabs/Weapon", typeof(GameObject)) as GameObject;
+        music = musicObject.GetComponent<MusicController>();
     }
 
     // Update is called once per frame
@@ -47,31 +54,38 @@ public class Character : MonoBehaviour
         switch (upgrade) {
             case "sword":
                 hasSword = true;
+                music.AddInstrument(2, 1, 0);
                 break;
             case "bull":
                 hasHorns = true;
+                music.AddInstrument(0, 1, 2);
                 break;
             case "shield":
                 hasShield = true;
+                music.AddInstrument(1, 0, 2);
                 break;
             case "eye":
                 hasVamp = true;
+                music.AddInstrument(2, 1, 0);
                 break;
             case "bomb":
                 hasBomb = true;
+                music.AddInstrument(0, 2, 1);
                 break;
             case "bow":
                 hasBow = true;
+                music.AddInstrument(2, 1, 0);
                 break;
             case "fan":
                 hasFan = true;
+                music.AddInstrument(1, 2, 0);
                 break;
             default:
                 return false;
         }
 
         clipPickup.Play();
-        
+
         upgradeCount++;
         return true;
     }
@@ -85,7 +99,10 @@ public class Character : MonoBehaviour
         Weapon attackData = attack.GetComponent<Weapon>();
         attackData.SetAttributes(
             this, isPlayer, facingRight,
-            hasSword, hasShield, hasBomb, hasVamp);
+            hasSword, hasShield, hasBomb, hasVamp, hasHorns);
+
+        clipAttack.pitch = Random.Range(0.8f, 1.0f);
+        clipAttack.Play();
 
         // GameObject explosion = Resources.Load(
         //     "Prefabs/Explosion", typeof(GameObject)) as GameObject;
@@ -99,7 +116,8 @@ public class Character : MonoBehaviour
         bool a = hasBow;
         a = hasFan;
         a = hasHorns;
-        Debug.Log("Took damage.");
+        // Debug.Log("Took damage.");
+        clipHurt.Play();
     }
 
     public void Heal(float amount) {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float movement_speed = 2;
+    public float charge_mod = 15f;
     public float cooldown_time = 0.5f;
 
     private float cooldown = 0f;
@@ -29,6 +30,11 @@ public class PlayerController : MonoBehaviour
 
         if (playerChar.isAttacking) {
             horizontal_input = 0f;
+            vertical_input = 0f;
+        }
+        else if (playerChar.isDashing) {
+            horizontal_input = (cooldown_time - cooldown + 0.1f) * charge_mod;
+            if (!facing_right) horizontal_input = -horizontal_input;
             vertical_input = 0f;
         }
         else {
