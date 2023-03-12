@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
     public bool isAttacking = false;
 
     private int upgradeCount = 0;
-    private bool hasSword = true;
+    private bool hasSword = false;
     private bool hasHorns = false;
     private bool hasShield = false;
     private bool hasVamp = false;
