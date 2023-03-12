@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public GameObject musicObject;
+    
     public AudioSource clipPickup;
+    public AudioSource clipAttack;
 
     public float maxHealth = 100f;
     public bool isPlayer = false;
@@ -25,12 +28,14 @@ public class Character : MonoBehaviour
     private bool hasFan = false;
 
     private GameObject weapon;
+    private MusicController music;
 
     // Start is called before the first frame update
     void Start() {
         health = maxHealth;
         weapon = Resources.Load(
             "Prefabs/Weapon", typeof(GameObject)) as GameObject;
+        music = musicObject.GetComponent<MusicController>();
     }
 
     // Update is called once per frame
@@ -48,24 +53,31 @@ public class Character : MonoBehaviour
         switch (upgrade) {
             case "sword":
                 hasSword = true;
+                music.AddInstrument(2, 1, 0);
                 break;
             case "bull":
                 hasHorns = true;
+                music.AddInstrument(0, 1, 2);
                 break;
             case "shield":
                 hasShield = true;
+                music.AddInstrument(1, 0, 2);
                 break;
             case "eye":
                 hasVamp = true;
+                music.AddInstrument(2, 1, 0);
                 break;
             case "bomb":
                 hasBomb = true;
+                music.AddInstrument(0, 2, 1);
                 break;
             case "bow":
                 hasBow = true;
+                music.AddInstrument(2, 1, 0);
                 break;
             case "fan":
                 hasFan = true;
+                music.AddInstrument(1, 2, 0);
                 break;
             default:
                 return false;
@@ -87,6 +99,9 @@ public class Character : MonoBehaviour
         attackData.SetAttributes(
             this, isPlayer, facingRight,
             hasSword, hasShield, hasBomb, hasVamp, hasHorns);
+
+        clipAttack.pitch = Random.Range(0.8f, 1.0f);
+        clipAttack.Play();
 
         // GameObject explosion = Resources.Load(
         //     "Prefabs/Explosion", typeof(GameObject)) as GameObject;

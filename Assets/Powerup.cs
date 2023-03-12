@@ -22,7 +22,7 @@ public class Powerup : MonoBehaviour
     void Start() {
         sprite = transform.Find("sprite").gameObject;
         spriteRender = sprite.GetComponent<SpriteRenderer>();
-        SetWeapon("bull");
+        SetWeapon("sword");
     }
 
     // Update is called once per frame

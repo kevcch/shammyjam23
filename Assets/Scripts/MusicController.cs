@@ -39,6 +39,47 @@ public class MusicController : MonoBehaviour
         lastTime = bass.time;
     }
 
+    public void AddInstrument(int opt1, int opt2, int opt3) {
+        if (opt1 == 0 && !includeDrums) {
+            includeDrums = true;
+            return;
+        }
+        else if (opt1 == 1 && !includeChords) {
+            includeChords = true;
+            return;
+        }
+        else if (opt1 == 2 && !includeSecond) {
+            includeSecond = true;
+            return;
+        }
+        
+        if (opt2 == 0 && !includeDrums) {
+            includeDrums = true;
+            return;
+        }
+        else if (opt2 == 1 && !includeChords) {
+            includeChords = true;
+            return;
+        }
+        else if (opt2 == 2 && !includeSecond) {
+            includeSecond = true;
+            return;
+        }
+        
+        if (opt3 == 0 && !includeDrums) {
+            includeDrums = true;
+            return;
+        }
+        else if (opt3 == 1 && !includeChords) {
+            includeChords = true;
+            return;
+        }
+        else if (opt3 == 2 && !includeSecond) {
+            includeSecond = true;
+            return;
+        }
+    }
+
     void NextSection() {
         section++;
         if (section >= 4) section = 0;
