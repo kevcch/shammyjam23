@@ -88,14 +88,16 @@ public class Weapon : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         GameObject victim = collision.gameObject;
 
+        Debug.Log(victim);
+
         if (playerCreated && victim.tag == "Enemy") {
             Debug.Log("Collision with enemy.");
-            // Attack(collision.);
+            Attack(victim.GetComponent<Character>());
         }
 
         else if (!playerCreated && victim.tag == "Player") {
             Debug.Log("Collision with player.");
-            Attack(collision.transform.Find("PlayerObject").GetComponent<Character>());
+            Attack(victim.transform.Find("PlayerObject").GetComponent<Character>());
         }
     }
 

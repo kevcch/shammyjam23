@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public GameObject musicObject;
+    public GameObject healthBarObject;
     
     public AudioSource clipPickup;
     public AudioSource clipAttack;
@@ -24,12 +25,13 @@ public class Character : MonoBehaviour
     private bool hasHorns = false;
     private bool hasShield = false;
     private bool hasVamp = false;
-    private bool hasBomb = false;
+    private bool hasBomb = true;
     private bool hasBow = false;
     private bool hasFan = false;
 
     private GameObject weapon;
     private MusicController music;
+    private GameObject healthBar;
 
     // Start is called before the first frame update
     void Start() {
@@ -37,11 +39,16 @@ public class Character : MonoBehaviour
         weapon = Resources.Load(
             "Prefabs/Weapon", typeof(GameObject)) as GameObject;
         music = musicObject.GetComponent<MusicController>();
+        healthBar = healthBarObject.transform.Find("Image").gameObject;
     }
 
     // Update is called once per frame
     void Update() {
-
+        if (isPlayer) {
+            if (Random.Range(0f, 1f) < 0.01f) {
+                Heal(1);
+            }
+        }
     }
 
     public void SetShielded(bool shielded) {
@@ -90,6 +97,11 @@ public class Character : MonoBehaviour
         return true;
     }
 
+    void UpdateHealthBar() {
+        float scaleX = health / maxHealth;
+        healthBar.transform.localScale = new Vector3(scaleX, 1f, 1f);
+    }
+
     public void Attack(bool facingRight) {
         float offset = 0.7f;
         if (!facingRight) offset = -offset;
@@ -112,16 +124,18 @@ public class Character : MonoBehaviour
     public void Damage(float amount) {
         if (!isShielded) {
             health -= amount;
+            if (clipHurt) clipHurt.Play();
+            UpdateHealthBar();
         }
-        bool a = hasBow;
-        a = hasFan;
-        a = hasHorns;
+        // bool a = hasBow;
+        // a = hasFan;
+        // a = hasHorns;
         // Debug.Log("Took damage.");
-        clipHurt.Play();
     }
 
     public void Heal(float amount) {
         health += amount;
         if (health > maxHealth) health = maxHealth;
+        UpdateHealthBar();
     }
 }

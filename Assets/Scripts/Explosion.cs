@@ -31,10 +31,11 @@ public class Explosion : MonoBehaviour
         if (victim.tag == "Player") {
             Character victimData = victim.transform.Find("PlayerObject")
                 .GetComponent<Character>();
-            victimData.Damage(damage);
+            victimData.Damage(damage / 2);
         }
         else if (victim.tag == "Enemy") {
-            // stuff
+            Character victimData = victim.GetComponent<Character>();
+            victimData.Damage(damage);
         }
     }
 }
