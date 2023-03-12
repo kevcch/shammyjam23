@@ -31,8 +31,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         slashSprite = transform.Find("attack_0").gameObject.GetComponent<SpriteRenderer>();
-        explosion = Resources.Load(
-            "Prefabs/Explosion.prefab", typeof(GameObject)) as GameObject;
+        explosion = Resources.Load("Prefabs/Explosion", typeof(GameObject)) as GameObject;
         slashSprite.color = colorNormal;
 
         slashSprite.flipX = !facingRight;
@@ -108,7 +107,9 @@ public class Weapon : MonoBehaviour
         }
 
         if (isBomb) {
-            Instantiate(explosion, transform.position, transform.rotation);
+            // Instantiate(explosion, transform.position, transform.rotation);
+            GameObject bomb = Instantiate(explosion);
+            bomb.transform.position = transform.position;
             isBomb = false; // only explode once per attack
         }
     }
