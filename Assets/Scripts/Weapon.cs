@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
     private Color colorNormal = new Color(1.0f, 0.85f, 0.9f);
     private Color colorStrong = new Color(0.4f, 1.0f, 1.0f);
     private Color colorFire = new Color(1.0f, 0.3f, 0.3f);
-    private Color colorShield = new Color(0.7f, 0.7f, 0.0f);
+    private Color colorShield = new Color(1f, 0.9f, 0.2f);
 
     private bool isSword = false;
     private bool isShield = false;
