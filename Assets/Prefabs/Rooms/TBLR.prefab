@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 5853704068408461820}
   m_Layer: 0
   m_Name: Tilemap_Water
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 7971849915031179209}
   m_Layer: 0
   m_Name: Tilemap_Objects
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2876,6 +2876,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1674864658}
     m_Modifications:
+    - target: {fileID: 3895449710888547425, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
+      propertyPath: openingDirection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7474177646201639336, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2938,6 +2942,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1674864658}
     m_Modifications:
+    - target: {fileID: 3895449710888547425, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
+      propertyPath: openingDirection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7474177646201639336, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3000,6 +3008,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1674864658}
     m_Modifications:
+    - target: {fileID: 3895449710888547425, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
+      propertyPath: openingDirection
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7474177646201639336, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3062,6 +3074,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1674864658}
     m_Modifications:
+    - target: {fileID: 3895449710888547425, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
+      propertyPath: openingDirection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7474177646201639336, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
       propertyPath: m_RootOrder
       value: 2
