@@ -75,11 +75,16 @@ public class Character : MonoBehaviour
         float offset = 0.7f;
         if (!facingRight) offset = -offset;
 
-        Weapon attack = Instantiate(weapon).GetComponent<Weapon>();
+        GameObject attack = Instantiate(weapon);
         attack.transform.position = transform.position + new Vector3(offset, 0f, 0f);
-        attack.SetAttributes(
+        Weapon attackData = attack.GetComponent<Weapon>();
+        attackData.SetAttributes(
             this, isPlayer, facingRight,
             hasSword, hasShield, hasBomb, hasVamp);
+
+        // GameObject explosion = Resources.Load(
+        //     "Prefabs/Explosion", typeof(GameObject)) as GameObject;
+        // Instantiate(explosion);
     }
 
     public void Damage(float amount) {
@@ -89,6 +94,7 @@ public class Character : MonoBehaviour
         bool a = hasBow;
         a = hasFan;
         a = hasHorns;
+        Debug.Log("Took damage.");
     }
 
     public void Heal(float amount) {

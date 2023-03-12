@@ -11,7 +11,8 @@ public class Weapon : MonoBehaviour
     private GameObject explosion;
     private SpriteRenderer slashSprite;
 
-    private Color colorNormal = new Color(1.0f, 1.0f, 1.0f);
+    // private Color colorNormal = new Color(1.0f, 1.0f, 1.0f);
+    private Color colorNormal = new Color(1.0f, 0.85f, 0.9f);
     private Color colorStrong = new Color(0.4f, 1.0f, 1.0f);
     private Color colorFire = new Color(1.0f, 0.3f, 0.3f);
     private Color colorShield = new Color(0.7f, 0.7f, 0.0f);
@@ -27,7 +28,7 @@ public class Weapon : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        slashSprite = transform.Find("slash_0").gameObject.GetComponent<SpriteRenderer>();
+        slashSprite = transform.Find("attack_0").gameObject.GetComponent<SpriteRenderer>();
         explosion = Resources.Load(
             "Prefabs/Explosion.prefab", typeof(GameObject)) as GameObject;
         slashSprite.color = colorNormal;
@@ -48,7 +49,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update() {
         time += Time.deltaTime;
-        if (time >= 0.5f) {
+        if (time >= 0.3f) {
             Destroy(gameObject);
             Debug.Log("End attack");
             actor.isAttacking = false;
@@ -75,18 +76,17 @@ public class Weapon : MonoBehaviour
     // If this was player created, damage all objects with the "Enemy" tag
     // colliding with this object.
     // If this was NOT player created, damage the player if they collide.
-    void OnCollisionEnter(Collision collision) {
-        Character victim = collision.gameObject.GetComponent<Character>();
-        if (victim == null) return;
+    void OnTriggerEnter2D(Collider2D collision) {
+        GameObject victim = collision.gameObject;
 
         if (playerCreated && victim.tag == "Enemy") {
             Debug.Log("Collision with enemy.");
-            Attack(victim);
+            // Attack(collision.);
         }
 
         else if (!playerCreated && victim.tag == "Player") {
             Debug.Log("Collision with player.");
-            Attack(victim);
+            Attack(collision.transform.Find("PlayerObject").GetComponent<Character>());
         }
     }
 
