@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: skeleton_archer_death_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af91e7a7f087f4e21a5bafcb3505c907
+      internalID: -424612597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78f29d7ef2ae4821af1bf6e5f0816d4
+      internalID: 993886380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66669a451b7424949a855b8a4ac7abc9
+      internalID: 2135780950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98264f7a069ec4e4b8c572f47f43fd78
+      internalID: 1654454181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62918f396ca75441fad791e0bcdddf28
+      internalID: 1156956464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b405a187467b44d9951403992f7f9a1
+      internalID: 1932781330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd509279412714dcbb418a7ce353d895
+      internalID: -442394470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e389fed6b12af4e369f14a5c5e74bbfe
+      internalID: -670147162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20e888a3c1344126ac61d90604db6d1
+      internalID: -1182564654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10f5035fbaf14a7d8c0b03e4cbce1ce
+      internalID: 550269878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d66996e9d8e74e56a56d25e8440c442
+      internalID: 1990607050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08ed4e0fcbf14b9a8759695519266ea
+      internalID: 1052160907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 9
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c93b7aadf90d4aa592ea66db6dec721
+      internalID: -1951375201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 9
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca48da72721d44d91bbf31b3321e804b
+      internalID: 1414912053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 9
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadd4b82e7a774c18b1dd8f4e13d7814
+      internalID: 415551642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_archer_death_15
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 9
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f98083b0b35c44d194c9d359ebfdbd5
+      internalID: 295852415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +462,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_archer_death_0: -424612597
+      skeleton_archer_death_1: 993886380
+      skeleton_archer_death_10: 1990607050
+      skeleton_archer_death_11: 1052160907
+      skeleton_archer_death_12: -1951375201
+      skeleton_archer_death_13: 1414912053
+      skeleton_archer_death_14: 415551642
+      skeleton_archer_death_15: 295852415
+      skeleton_archer_death_2: 2135780950
+      skeleton_archer_death_3: 1654454181
+      skeleton_archer_death_4: 1156956464
+      skeleton_archer_death_5: 1932781330
+      skeleton_archer_death_6: -442394470
+      skeleton_archer_death_7: -670147162
+      skeleton_archer_death_8: -1182564654
+      skeleton_archer_death_9: 550269878
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

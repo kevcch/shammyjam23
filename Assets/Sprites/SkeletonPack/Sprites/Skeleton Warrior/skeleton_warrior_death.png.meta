@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: skeleton_warrior_death_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa47eecaeb18a4d019fd8bf9de09c45d
+      internalID: 1595941556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae84667d5066402b9444a8dabddc8ce
+      internalID: -434027225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c434ad11f1304aedba45ddc4c2134ee
+      internalID: 819483932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24762f35c241444e5b2b96c717d1f307
+      internalID: -781297602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab17b3fd5e52447158e00ab85180820c
+      internalID: -1061314109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618bfb885235e423ebb2a677f3a57edf
+      internalID: -682585998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bad49f43a6704955aa5df509f909acb
+      internalID: 1950054187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b1e86501442471093d2e79ee92c009
+      internalID: -1372308926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96078441f1cf421daddc75451d18bc5
+      internalID: -340400005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c54cd1dcdf54acda025263b07e3cba
+      internalID: -1291993350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27268939e98a46f99e46b4f9cc070e0
+      internalID: 621240427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff3c805c3e974e8dbe3088395b1cb09
+      internalID: 1250554740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 9
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03000f7ead015415c95fc5ca87524dbf
+      internalID: -1098843810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 9
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647047665c5b14a4fbaa0856bfbad792
+      internalID: 1953813451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 9
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248f212470fd040a2932b25f64209c93
+      internalID: -258667159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_death_15
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 9
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a34eb30f8ca4c8e927258a75a81bca
+      internalID: -1049596978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +462,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_warrior_death_0: 1595941556
+      skeleton_warrior_death_1: -434027225
+      skeleton_warrior_death_10: 621240427
+      skeleton_warrior_death_11: 1250554740
+      skeleton_warrior_death_12: -1098843810
+      skeleton_warrior_death_13: 1953813451
+      skeleton_warrior_death_14: -258667159
+      skeleton_warrior_death_15: -1049596978
+      skeleton_warrior_death_2: 819483932
+      skeleton_warrior_death_3: -781297602
+      skeleton_warrior_death_4: -1061314109
+      skeleton_warrior_death_5: -682585998
+      skeleton_warrior_death_6: 1950054187
+      skeleton_warrior_death_7: -1372308926
+      skeleton_warrior_death_8: -340400005
+      skeleton_warrior_death_9: -1291993350
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7d5cde5f04744c79fa63162e835465
+      internalID: 1034739378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950f41c2455f24cc9aac2c941d3a2b32
+      internalID: 875442549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2d74e4169b44d47832cbbc5aceba82
+      internalID: 1961065487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 103
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f7cac4f04b640d997d29bd009d12e6
+      internalID: -806700465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 73
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db7c2ac3e0a6464e935ab246f576633
+      internalID: 1006174935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 73
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460ac777ec06c423ab25c501be4ac560
+      internalID: -452890781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 73
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06248e4329c344cb2b756c0917403065
+      internalID: 1034545001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_7
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 73
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1551ab9315ca14285a51363c86c4c0ad
+      internalID: 1980777805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 41
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432c12cda714d41409d79ebcef743365
+      internalID: -1570145760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 41
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0954db9f6244a298b871375f5455cb
+      internalID: -1844916670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 41
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6522e0a57d84ef1898254fe89d1451
+      internalID: -896133881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 41
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c002c8021a69443d8b7abda4cf02d1ed
+      internalID: -294099759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9207a802982d49ed9bc12341c33653c
+      internalID: 1952540164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 8
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40221d8d5500c48bd987b71fc6662acd
+      internalID: 593669212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f702e8924a5e94401a3fd732fe793800
+      internalID: 788448557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton_warrior_stab_attack_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035780d9a21fc4495bf9a0fd9782a9ab
+      internalID: 1309527554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +462,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_warrior_stab_attack_0: 1034739378
+      skeleton_warrior_stab_attack_1: 875442549
+      skeleton_warrior_stab_attack_10: -896133881
+      skeleton_warrior_stab_attack_11: -294099759
+      skeleton_warrior_stab_attack_12: 1952540164
+      skeleton_warrior_stab_attack_13: 593669212
+      skeleton_warrior_stab_attack_14: 788448557
+      skeleton_warrior_stab_attack_15: 1309527554
+      skeleton_warrior_stab_attack_2: 1961065487
+      skeleton_warrior_stab_attack_3: -806700465
+      skeleton_warrior_stab_attack_4: 1006174935
+      skeleton_warrior_stab_attack_5: -452890781
+      skeleton_warrior_stab_attack_6: 1034545001
+      skeleton_warrior_stab_attack_7: 1980777805
+      skeleton_warrior_stab_attack_8: -1570145760
+      skeleton_warrior_stab_attack_9: -1844916670
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
