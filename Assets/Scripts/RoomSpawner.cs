@@ -11,7 +11,7 @@ public class RoomSpawner : MonoBehaviour
     private RoomTemplates templates;
 
     private void Start() {
-        Invoke("SpawnRooms", 1.0f);
+        Invoke("SpawnRooms", 0.1f);
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         StartCoroutine(destroySpawnpoint());
     }
@@ -45,7 +45,8 @@ public class RoomSpawner : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("Despawning spawn point");
+        spawned = true;
+        //Debug.Log("Despawning spawn point");
         if (other.CompareTag("Spawnpoint") ) {
             Destroy(gameObject);
         }
@@ -57,7 +58,7 @@ public class RoomSpawner : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         spawned = true;
-        Debug.Log("Despawning spawn point");
+        //Debug.Log("Despawning spawn point");
         if (collision.CompareTag("Spawnpoint"))
         {
             Destroy(gameObject);
@@ -68,7 +69,7 @@ public class RoomSpawner : MonoBehaviour
         }
     }
     IEnumerator destroySpawnpoint() {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(2.0f);
         Destroy(gameObject);
     }
 }
