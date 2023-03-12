@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public AudioSource clipPickup;
+
     public float maxHealth = 100f;
     public bool isPlayer = false;
     public int maxUpgrades = 3;
@@ -39,36 +41,39 @@ public class Character : MonoBehaviour
         isShielded = shielded;
     }
 
-    public void AddUpgrade(int upgrade) {
-        if (upgradeCount >= maxUpgrades) return;
+    public bool AddUpgrade(string upgrade) {
+        if (upgradeCount >= maxUpgrades) return false;
 
         switch (upgrade) {
-            case 0:
+            case "sword":
                 hasSword = true;
                 break;
-            case 1:
+            case "bull":
                 hasHorns = true;
                 break;
-            case 2:
+            case "shield":
                 hasShield = true;
                 break;
-            case 3:
+            case "eye":
                 hasVamp = true;
                 break;
-            case 4:
+            case "bomb":
                 hasBomb = true;
                 break;
-            case 5:
+            case "bow":
                 hasBow = true;
                 break;
-            case 6:
+            case "fan":
                 hasFan = true;
                 break;
             default:
-                return;
+                return false;
         }
 
+        clipPickup.Play();
+        
         upgradeCount++;
+        return true;
     }
 
     public void Attack(bool facingRight) {
