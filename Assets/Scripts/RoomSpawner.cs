@@ -8,11 +8,6 @@ public class RoomSpawner : MonoBehaviour
     public bool spawned = false;
     // 1 = need bottom, 2 == need top, 3 = need left, 4 = need right
 
-    public GameObject[] bottomRooms;
-    public GameObject[] topRooms;
-    public GameObject[] leftRooms;
-    public GameObject[] rightRooms;
-
     private void Start() {
         Invoke("SpawnRooms", 0.1f);
     }
@@ -22,7 +17,8 @@ public class RoomSpawner : MonoBehaviour
         if (!spawned) {
             switch (openingDirection) {
                 case 1:
-                    int rand = Random.RandomRange(0, bottomRooms.Length);
+                    //int rand = Random.RandomRange(0, bottomRooms.Length);
+
                     break;
                 case 2:
                     break;
