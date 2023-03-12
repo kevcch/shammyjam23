@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
     private bool hasHorns = false;
     private bool hasShield = false;
     private bool hasVamp = false;
-    private bool hasBomb = true;
+    private bool hasBomb = false;
     private bool hasBow = false;
     private bool hasFan = false;
 
@@ -111,10 +111,10 @@ public class Character : MonoBehaviour
         float r = Random.Range(0f, 1f);
         if (r <= 0.5f) {
             int index = Random.Range(0, 4);
-            GameObject powerUpObject = Instantiate(powerUp);
-            powerUpObject.transform.position = transform.position;
-            Debug.Log(powerUpObject.GetComponent<Powerup>());
-            powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
+            //GameObject powerUpObject = Instantiate(powerUp);
+            //powerUpObject.transform.position = transform.position;
+            //Debug.Log(powerUpObject.GetComponent<Powerup>());
+            //powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
         }
         Destroy(gameObject);
     }
