@@ -111,10 +111,10 @@ public class Character : MonoBehaviour
         float r = Random.Range(0f, 1f);
         if (r <= 0.5f) {
             int index = Random.Range(0, 4);
-            //GameObject powerUpObject = Instantiate(powerUp);
-            //powerUpObject.transform.position = transform.position;
-            //Debug.Log(powerUpObject.GetComponent<Powerup>());
-            //powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
+            GameObject powerUpObject = Instantiate(powerUp);
+            powerUpObject.transform.position = transform.position;
+            Debug.Log(powerUpObject.GetComponent<Powerup>());
+            powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
         }
         Destroy(gameObject);
     }

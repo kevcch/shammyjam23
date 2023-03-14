@@ -19,21 +19,24 @@ public class Powerup : MonoBehaviour
     private float time = 0f;
 
     // Start is called before the first frame update
+    
     void Start() {
         sprite = transform.Find("sprite").gameObject;
         spriteRender = sprite.GetComponent<SpriteRenderer>();
         Debug.Log(sprite);
-        SetWeapon("sword");
     }
+    
 
     // Update is called once per frame
     void Update() {
         time += Time.deltaTime;
         float yOffset = Mathf.Sin(time) / 10;
-        sprite.transform.position = new Vector3(0f, yOffset, 0f);
+        sprite.transform.position = transform.position + new Vector3(0f, yOffset, 0f);
     }
 
     public void SetWeapon(string weaponType) {
+        sprite = transform.Find("sprite").gameObject;
+        spriteRender = sprite.GetComponent<SpriteRenderer>();
         weapon = weaponType;
 
         switch (weaponType) {
