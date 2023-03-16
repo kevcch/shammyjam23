@@ -4,105 +4,82 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public GameObject musicObject;
-    public GameObject healthBarObject;
+    public AudioSource audioSource;
+    // public GameObject healthBarObject;
     
-    public AudioSource clipPickup;
-    public AudioSource clipAttack;
-    public AudioSource clipHurt;
+    protected AudioClip clipAttack;
+    protected AudioClip clipHurt;
 
     public float maxHealth = 100f;
-    public bool isPlayer = false;
     public int maxUpgrades = 3;
 
-    private float health;
-    private bool isShielded;
-    public bool isAttacking = false;
-    public bool isDashing = false;
+    protected float health;
+    protected bool isShielded;
+    protected bool isAttacking = false;
+    protected bool isDashing = false;
+    protected bool isPlayer = false;
 
-    private int upgradeCount = 0;
-    private bool hasSword = false;
-    private bool hasHorns = false;
-    private bool hasShield = false;
-    private bool hasVamp = false;
-    private bool hasBomb = false;
-    private bool hasBow = false;
-    private bool hasFan = false;
+    protected int upgradeCount = 0;
+    protected bool hasSword = false;
+    protected bool hasHorns = true;
+    protected bool hasShield = false;
+    protected bool hasVamp = false;
+    protected bool hasBomb = true;
+    protected bool hasBow = false;
+    protected bool hasFan = false;
 
-    private GameObject weapon;
-    private MusicController music;
-    private GameObject healthBar;
-    private GameObject powerUp;
+    // loaded prefabs
+    protected GameObject weaponPF;      // Prefabs/Weapon
+    protected GameObject healthBarPF;   // Prefabs/HealthBar
+    protected GameObject powerUpPF;
+
+    protected MusicController music;
+
+    protected GameObject healthBarObject;
+    protected GameObject healthBar;
 
     // Start is called before the first frame update
-    void Start() {
-        health = maxHealth;
-        weapon = Resources.Load(
+    protected virtual void Start() {
+        // load prefabs from Resources
+        weaponPF = Resources.Load(
             "Prefabs/Weapon", typeof(GameObject)) as GameObject;
-        if (musicObject)
-            music = musicObject.GetComponent<MusicController>();
+        healthBarPF = Resources.Load(
+            "Prefabs/HealthBar", typeof(GameObject)) as GameObject;
+        powerUpPF = Resources.Load(
+            "Prefabs/Powerup", typeof(GameObject)) as GameObject;
+
+        // load audio from Resources
+        clipAttack = Resources.Load<AudioClip>("Audio/sword/sword_retro");
+        clipHurt = Resources.Load<AudioClip>("Audio/hurt");
+        
+        // create a health bar with the same location as this Game Object
+        healthBarObject = Instantiate(healthBarPF, gameObject.transform);
+        // healthBarObject.transform.parent = gameObject.transform;
         healthBar = healthBarObject.transform.Find("Image").gameObject;
-        powerUp = Resources.Load("Prefabs/Powerup", typeof(GameObject)) as GameObject;
+        
+        // start at full health
+        health = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update() {
-        if (isPlayer) {
-            if (Random.Range(0f, 1f) < 0.01f) {
-                Heal(1);
-            }
-        }
+    protected void UpdateHealthBar() {
+        float scaleX = health / maxHealth;
+        healthBar.transform.localScale = new Vector3(scaleX, 1f, 1f);
+    }
+
+    // TODO: use a "state" variable instead of independent "is___" variables
+    public bool IsAttacking() { return isAttacking; }
+    public bool IsDashing() { return isDashing; }
+
+    public void SetAttacking(bool attacking) {
+        isAttacking = attacking;
+    }
+
+    public void SetDashing(bool dashing) {
+        isDashing = dashing;
     }
 
     public void SetShielded(bool shielded) {
         isShielded = shielded;
-    }
-
-    public bool AddUpgrade(string upgrade) {
-        if (upgradeCount >= maxUpgrades) return false;
-
-        switch (upgrade) {
-            case "sword":
-                hasSword = true;
-                music.AddInstrument(2, 1, 0);
-                break;
-            case "bull":
-                hasHorns = true;
-                music.AddInstrument(0, 1, 2);
-                break;
-            case "shield":
-                hasShield = true;
-                music.AddInstrument(1, 0, 2);
-                break;
-            case "eye":
-                hasVamp = true;
-                music.AddInstrument(2, 1, 0);
-                break;
-            case "bomb":
-                hasBomb = true;
-                music.AddInstrument(0, 2, 1);
-                break;
-            case "bow":
-                hasBow = true;
-                music.AddInstrument(2, 1, 0);
-                break;
-            case "fan":
-                hasFan = true;
-                music.AddInstrument(1, 2, 0);
-                break;
-            default:
-                return false;
-        }
-
-        clipPickup.Play();
-
-        upgradeCount++;
-        return true;
-    }
-
-    void UpdateHealthBar() {
-        float scaleX = health / maxHealth;
-        healthBar.transform.localScale = new Vector3(scaleX, 1f, 1f);
     }
 
     public void Death() {
@@ -111,7 +88,7 @@ public class Character : MonoBehaviour
         float r = Random.Range(0f, 1f);
         if (r <= 0.5f) {
             int index = Random.Range(0, 4);
-            GameObject powerUpObject = Instantiate(powerUp);
+            GameObject powerUpObject = Instantiate(powerUpPF);
             powerUpObject.transform.position = transform.position;
             Debug.Log(powerUpObject.transform.position);
             powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
@@ -123,32 +100,26 @@ public class Character : MonoBehaviour
         float offset = 0.7f;
         if (!facingRight) offset = -offset;
 
-        GameObject attack = Instantiate(weapon);
-        attack.transform.position = transform.position + new Vector3(offset, 0f, 0f);
+        GameObject attack = Instantiate(weaponPF, gameObject.transform);
+        attack.transform.position += new Vector3(offset, 0f, 0f);
         Weapon attackData = attack.GetComponent<Weapon>();
         attackData.SetAttributes(
             this, isPlayer, facingRight,
             hasSword, hasShield, hasBomb, hasVamp, hasHorns);
 
-        clipAttack.pitch = Random.Range(0.8f, 1.0f);
-        clipAttack.Play();
-
-        // GameObject explosion = Resources.Load(
-        //     "Prefabs/Explosion", typeof(GameObject)) as GameObject;
-        // Instantiate(explosion);
+        // clipAttack.pitch = Random.Range(0.8f, 1.0f);
+        // clipAttack.Play();
+        audioSource.PlayOneShot(clipAttack);
     }
 
     public void Damage(float amount) {
         if (!isShielded) {
             health -= amount;
-            if (clipHurt) clipHurt.Play();
+            // if (clipHurt) clipHurt.Play();
+            audioSource.PlayOneShot(clipHurt);
             if (health <= 0) Death();
             UpdateHealthBar();
         }
-        // bool a = hasBow;
-        // a = hasFan;
-        // a = hasHorns;
-        // Debug.Log("Took damage.");
     }
 
     public void Heal(float amount) {

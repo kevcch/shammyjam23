@@ -54,8 +54,8 @@ public class Weapon : MonoBehaviour
         if (time >= 0.3f) {
             Destroy(gameObject);
             Debug.Log("End attack");
-            actor.isAttacking = false;
-            actor.isDashing = false;
+            actor.SetAttacking(false);
+            actor.SetDashing(false);
 
             // if the player is shielded, remove it here
             if (isShield) actor.SetShielded(false);
@@ -76,8 +76,8 @@ public class Weapon : MonoBehaviour
         isVampire = vampire;
         isHorns = horns;
 
-        if (isHorns) actor.isDashing = true;
-        else actor.isAttacking = true;
+        if (isHorns) actor.SetDashing(true);
+        else actor.SetAttacking(true);
 
         offset = transform.position - actor.transform.position;
     }

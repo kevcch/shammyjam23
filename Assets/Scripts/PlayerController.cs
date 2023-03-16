@@ -28,11 +28,11 @@ public class PlayerController : MonoBehaviour
         float horizontal_input;
         float vertical_input;
 
-        if (playerChar.isAttacking) {
+        if (playerChar.IsAttacking()) {
             horizontal_input = 0f;
             vertical_input = 0f;
         }
-        else if (playerChar.isDashing) {
+        else if (playerChar.IsDashing()) {
             horizontal_input = (cooldown_time - cooldown + 0.1f) * charge_mod;
             if (!facing_right) horizontal_input = -horizontal_input;
             vertical_input = 0f;
