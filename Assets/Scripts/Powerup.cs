@@ -18,6 +18,15 @@ public class Powerup : MonoBehaviour
 
     private float time = 0f;
 
+    // Start is called before the first frame update
+    
+    void Start() {
+        sprite = transform.Find("sprite").gameObject;
+        spriteRender = sprite.GetComponent<SpriteRenderer>();
+        Debug.Log(sprite);
+    }
+    
+
     // Update is called once per frame
     void Update() {
         time += Time.deltaTime;
@@ -60,8 +69,8 @@ public class Powerup : MonoBehaviour
         if (!(player.tag == "Player")) return;
         Debug.Log("Gained " + weapon);
 
-        PlayerCharacter playerData = player.transform.Find("PlayerObject")
-            .gameObject.GetComponent<PlayerCharacter>();
+        Character playerData = player.transform.Find("PlayerObject")
+            .gameObject.GetComponent<Character>();
         if (playerData.AddUpgrade(weapon)) {
             Destroy(gameObject);
         }
