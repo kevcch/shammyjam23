@@ -19,11 +19,13 @@ public class Powerup : MonoBehaviour
     private float time = 0f;
 
     // Start is called before the first frame update
-    // void Start() {
-    //     Debug.Log("HERE");
-    //     Debug.Log(spriteRender);
-    //     // SetWeapon("sword");
-    // }
+    
+    void Start() {
+        sprite = transform.Find("sprite").gameObject;
+        spriteRender = sprite.GetComponent<SpriteRenderer>();
+        Debug.Log(sprite);
+    }
+    
 
     // Update is called once per frame
     void Update() {

@@ -1805,6 +1805,8 @@ Transform:
   m_Children:
   - {fileID: 5535106318217544845}
   - {fileID: 9196328894644040584}
+  - {fileID: 8971069182003426050}
+  - {fileID: 5180186739361374058}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2974,4 +2976,128 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7474177646201639336, guid: f27ab4bce31a44054965dfd5a4e10dd6, type: 3}
   m_PrefabInstance: {fileID: 3608126573990780992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5766907901940246145
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5535106318727253859}
+    m_Modifications:
+    - target: {fileID: 1723634329933347300, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_Name
+      value: MushroomEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.145469
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5023848
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+--- !u!4 &5180186739361374058 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+  m_PrefabInstance: {fileID: 5766907901940246145}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7751882060261542633
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5535106318727253859}
+    m_Modifications:
+    - target: {fileID: 1723634329933347300, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_Name
+      value: MushroomEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.3759937
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.1033387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+--- !u!4 &8971069182003426050 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1723634329933347307, guid: 9f4b10e37f517884192b22c7ea67bbcc, type: 3}
+  m_PrefabInstance: {fileID: 7751882060261542633}
   m_PrefabAsset: {fileID: 0}
