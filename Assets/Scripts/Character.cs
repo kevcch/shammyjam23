@@ -21,10 +21,10 @@ public class Character : MonoBehaviour
 
     protected int upgradeCount = 0;
     protected bool hasSword = false;
-    protected bool hasHorns = true;
+    protected bool hasHorns = false;
     protected bool hasShield = false;
     protected bool hasVamp = false;
-    protected bool hasBomb = true;
+    protected bool hasBomb = false;
     protected bool hasBow = false;
     protected bool hasFan = false;
 
@@ -82,17 +82,17 @@ public class Character : MonoBehaviour
         isShielded = shielded;
     }
 
-    public void Death() {
-        Debug.Log("Dead");
-        string[] choices = {"sword", "shield", "bull", "eye", "bomb"};
-        float r = Random.Range(0f, 1f);
-        if (r <= 0.5f) {
-            int index = Random.Range(0, 4);
-            GameObject powerUpObject = Instantiate(powerUpPF);
-            powerUpObject.transform.position = transform.position;
-            Debug.Log(powerUpObject.transform.position);
-            powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
-        }
+    public virtual void Death() {
+        // Debug.Log("Dead");
+        // string[] choices = {"sword", "shield", "bull", "eye", "bomb"};
+        // float r = Random.Range(0f, 1f);
+        // if (r <= 0.5f) {
+        //     int index = Random.Range(0, 4);
+        //     GameObject powerUpObject = Instantiate(powerUpPF);
+        //     powerUpObject.transform.position = transform.position;
+        //     Debug.Log(powerUpObject.transform.position);
+        //     powerUpObject.GetComponent<Powerup>().SetWeapon(choices[index]);
+        // }
         Destroy(gameObject);
     }
 

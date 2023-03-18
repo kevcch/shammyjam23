@@ -69,8 +69,8 @@ public class Powerup : MonoBehaviour
         if (!(player.tag == "Player")) return;
         Debug.Log("Gained " + weapon);
 
-        Character playerData = player.transform.Find("PlayerObject")
-            .gameObject.GetComponent<Character>();
+        PlayerCharacter playerData = player.transform.Find("PlayerObject")
+            .gameObject.GetComponent<PlayerCharacter>();
         if (playerData.AddUpgrade(weapon)) {
             Destroy(gameObject);
         }

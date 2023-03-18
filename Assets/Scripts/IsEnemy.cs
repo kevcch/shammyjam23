@@ -7,6 +7,8 @@ public class IsEnemy : MonoBehaviour
 {
 
     GameObject enemyView;
+    Character charData;
+
     public float movement_speed = 1;
     private char direction_facing;
     private int direction;
@@ -26,6 +28,7 @@ public class IsEnemy : MonoBehaviour
     {
         enemyView = transform.Find("EnemyView").gameObject;
         animator = enemyView.GetComponent<Animator>();
+        charData = GetComponent<Character>();
         rb = GetComponent<Rigidbody2D>();
         last_position = transform.position;
         RandomizeDirection();
@@ -107,6 +110,7 @@ public class IsEnemy : MonoBehaviour
     }
 
     IEnumerator PauseWalk() {
+        charData.Attack(true);
         yield return new WaitForSeconds(1.0f);
         isMovementDisabled = false;
     }
